@@ -3,27 +3,27 @@ package com.example.homeworking;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class UserInfo implements Parcelable {
+public class Info implements Parcelable {
 
     private String name;
 
-    public UserInfo(String name) {
+    public Info(String name) {
         this.name = name;
     }
-    protected UserInfo(Parcel in) {
+    protected Info(Parcel in) {
         name = in.readString();
 
     }
 
-    public static final Creator<UserInfo> CREATOR = new Creator<UserInfo>() {
+    public static final Creator<Info> CREATOR = new Creator<Info>() {
         @Override
-        public UserInfo createFromParcel(Parcel in) {
-            return new UserInfo(in);
+        public Info createFromParcel(Parcel in) {
+            return new Info(in);
         }
 
         @Override
-        public UserInfo[] newArray(int size) {
-            return new UserInfo[size];
+        public Info[] newArray(int size) {
+            return new Info[size];
         }
     };
 

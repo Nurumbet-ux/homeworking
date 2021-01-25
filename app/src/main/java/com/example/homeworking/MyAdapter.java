@@ -13,10 +13,10 @@ import java.util.List;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    List<UserInfo> list;
+    List<Info> list;
     Context context;
 
-    public List<UserInfo> getList() {
+    public List<Info> getList() {
         return list;
     }
 
@@ -24,7 +24,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         return context;
     }
 
-    public MyAdapter(List<UserInfo> list, Context context) {
+    public MyAdapter(List<Info> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -39,7 +39,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        UserInfo userInfo = list.get(position);
+        Info userInfo = list.get(position);
         holder.textName.setText(userInfo.getName());
     }
 
