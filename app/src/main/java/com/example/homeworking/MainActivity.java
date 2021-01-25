@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private static final String INSTATE_POSITION = "keyPosition";
     private RecyclerView recyclerView;
-    private ArrayList<UserInfo> list;/* just changed from List to ArrayList it works with the implantation of Parcelable method */
+    private ArrayList<UserInfo> list;
     private MyAdapter myAdapter;
     Button btnSave;
     EditText editText;
